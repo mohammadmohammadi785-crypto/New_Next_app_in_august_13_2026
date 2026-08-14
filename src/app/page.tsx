@@ -1,5 +1,11 @@
 import React from "react";
 
 export default function page() {
-  return <div></div>;
+  return (
+    <div>
+      <h1 className="text-2xl text-center font-bold">
+        Welcome to the Home Page
+      </h1>
+    </div>
+  );
 }
