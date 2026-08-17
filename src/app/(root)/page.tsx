@@ -1,7 +1,8 @@
 // import { motion } from "framer-motion";
 import { User, Code, Globe } from "lucide-react";
 
-function Home() {
+async function Home() {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   return (
     <section id="home">
       <h2 className="text-3xl">This is the Home Page</h2>
