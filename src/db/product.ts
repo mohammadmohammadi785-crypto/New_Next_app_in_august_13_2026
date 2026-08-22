@@ -18,7 +18,7 @@ export const listPriducts: Product = [
   {
     id: 3,
     name: "Apple MacBook pro 14",
-    desc: "equipped with the m3 pro chip a staunning liqued retina display and all day battery life for creators",
+    desc: "Equipped with the m3 pro chip a staunning liqued retina display and all day battery life for creators",
     price: 40000,
     qty: 10,
   },
