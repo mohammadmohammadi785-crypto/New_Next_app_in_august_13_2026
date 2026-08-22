@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
 import "../globals.css";
+import React from "react";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -18,7 +19,11 @@ export const metadata: Metadata = {
 };
 // ${geistSans.variable} ${geistMono.variable}${FontInter.variable}
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={`h-full antialiased`}>
       <body className="min-h-full flex flex-col">
@@ -26,9 +31,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <h1>header</h1>
         </header>
         {children}
-        <footer className="w-full text-2xl text-white py-4 text-center bg-gray-900">
-          <h1>footer</h1>
-        </footer>
       </body>
     </html>
   );
