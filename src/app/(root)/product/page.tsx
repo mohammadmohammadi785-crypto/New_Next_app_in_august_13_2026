@@ -1,7 +1,10 @@
 import React from "react";
 import { listPriducts } from "@/db/product";
 import { singleProduct } from "@/types/product.type";
-import ProductCard from "@/components/product-card";
+import ProductCard from "@/components/Product-Card";
+export const metadata = {
+  title: "product",
+};
 export default function page() {
   return (
     <div className="w-full max-w-6xl mx-auto my-4">
