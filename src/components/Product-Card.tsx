@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function product() {
+export default function ProductCard() {
   return (
     <div>
       <p>product</p>
