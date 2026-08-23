@@ -34,7 +34,7 @@ export default function RootLayout({
         <header className="w-full mx-auto text-center py-4 text-2xl text-white bg-gray-800">
           <h1>header</h1>
         </header>
-        {children}
+        <div>{children}</div>
         <footer className="w-full border-t py-4 bg-gray-800 text-white text-center text-2xl">
           footer
         </footer>
