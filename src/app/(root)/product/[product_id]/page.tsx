@@ -1,4 +1,4 @@
-import { listPriducts } from "@/db/product";
+import { listProducts } from "@/db/product";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import React from "react";
@@ -13,7 +13,7 @@ export default async function page({
   params: Promise<{ product_id: number }>;
 }) {
   const productId = (await params).product_id;
-  const foundProduct = listPriducts.find((p) => p.id == productId);
+  const foundProduct = listProducts.find((p) => p.id == productId);
   if (!foundProduct) return notFound();
   return (
     <div className="w-full border max-w-6xl rounded-md mx-auto my-12 gap-2 p-3 grid grid-cols-3">

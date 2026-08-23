@@ -1,11 +1,19 @@
 import React from "react";
 
-export default function Counter({ setValue }: { setValue: any }) {
+export default function Counter({
+  setValue,
+  lenght,
+}: {
+  setValue: any;
+  lenght: number;
+}) {
   return (
     <div>
       <button
-        className="p-4 border rounded-md"
-        onClick={() => setValue((prev: number) => prev + 1)}
+        className="py-2 px-5 my-0.5 border rounded-md"
+        onClick={() =>
+          setValue((prev: number) => (prev < lenght ? prev + 1 : (prev = 1)))
+        }
       >
         +1
       </button>
