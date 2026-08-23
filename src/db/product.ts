@@ -1,6 +1,6 @@
 import { Product } from "@/types/product.type";
 
-export const listPriducts: Product = [
+export const listProducts: Product = [
   {
     id: 1,
     name: "Dell latitude 7400",
