@@ -5,7 +5,7 @@ export default async function page({
 }: {
   searchParams: Promise<{ search?: string }>;
 }) {
-  const search = (await searchParams) || "";
+  const search = (await searchParams).search || "";
   return (
     <div className="w-full max-w-6xl mx-auto my-4">
       <List_Prosucts search={search} />

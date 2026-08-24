@@ -12,10 +12,10 @@ function List_Prosucts({ search }: { search: string }) {
   const [value, setValue] = useState(1);
   return (
     <div>
-      <Counter lenght={listProducts.length} setValue={setValue} />
+      {/* <Counter lenght={listProducts.length} setValue={setValue} /> */}
       <SearchForm />
       <div className="grid md:grid-cols-3 gap-3 grid-cols-1">
-        {filteredList.slice(0, value).map((pro: singleProduct) => {
+        {filteredList.map((pro: singleProduct) => {
           return <ProductCard key={pro.id} product={pro} />;
         })}
       </div>
