@@ -29,15 +29,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`h-full antialiased`}>
-      <body className="min-h-full flex flex-col">
-        <header className="w-full mx-auto text-center py-4 text-2xl text-white bg-gray-800">
-          <h1>header</h1>
-        </header>
-        <div>{children}</div>
-        <footer className="w-full border-t py-4 bg-gray-800 text-white text-center text-2xl">
-          footer
-        </footer>
+    <html lang="en">
+      <body className={`h-full antialiased`}>
+        <div className="min-h-full flex flex-col">
+          <header className="w-full mx-auto text-center py-4 text-2xl text-white bg-gray-800">
+            <h1>header</h1>
+          </header>
+          {children}
+          <footer className="w-full border-t py-4 bg-gray-800 text-white text-center text-2xl">
+            footer
+          </footer>
+        </div>
       </body>
     </html>
   );
