@@ -1,7 +1,20 @@
+import { useRouter, useSearchParams } from "next/navigation";
 import React, { useState } from "react";
 
 export default function SearchForm() {
-  const [value, setValue] = useState("");
+  const searchParams = useSearchParams();
+  const [value, setValue] = useState(searchParams.get("search") || "");
+  const router = useRouter();
+  function handleClick() {
+    const params = new URLSearchParams();
+    if (value) {
+      params.set("search", value);
+    } else {
+      params.delete("search");
+    }
+    router.push(`/product?${params.toString()}`);
+  }
+
   return (
     <div>
       <input
@@ -11,7 +24,10 @@ export default function SearchForm() {
         placeholder="Search"
         onChange={(e) => setValue(e.target.value)}
       />
-      <button className="py-2 px-5 border hover:cursor-pointer border-l-0 rounded-tl-none rounded-bl-none rounded-md">
+      <button
+        onClick={handleClick}
+        className="py-2 px-5 border hover:cursor-pointer border-l-0 rounded-tl-none rounded-bl-none rounded-md"
+      >
         Search
       </button>
     </div>
