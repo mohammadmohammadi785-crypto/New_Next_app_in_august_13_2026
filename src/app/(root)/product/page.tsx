@@ -7,7 +7,7 @@ export default async function page({
 }) {
   const search = (await searchParams).search || "";
   return (
-    <div className="w-full max-w-6xl mx-auto my-4">
+    <div className="w-full h-120 max-w-6xl mx-auto mt-18 my-4">
       <List_Prosucts search={search} />
     </div>
   );

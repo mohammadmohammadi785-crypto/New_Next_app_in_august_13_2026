@@ -4,7 +4,7 @@ import React from "react";
 
 export default function page() {
   return (
-    <div className="w-full max-w-5xl mx-auto grid gap-2s">
+    <div className="w-full max-w-5xl mx-auto mt-18 grid gap-2s">
       {Posts.map((x) => (
         <PostCard key={x.id} post={x} />
       ))}
