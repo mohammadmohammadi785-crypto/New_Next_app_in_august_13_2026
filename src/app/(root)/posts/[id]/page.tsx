@@ -14,9 +14,9 @@ export default async function page({
   if (!foundPost) return;
   return (
     <div className="w-full h-screen flex justify-center items-center">
-      <div className="w-9/12 h-fit p-4 border rounded-md">
-        <h1 className="text-2xl font-bold text-center">{foundPost.title}</h1>
-        <p className="p-3">{foundPost.body}</p>
+      <div className="w-9/12 p-4 border rounded-md">
+        <h1 className="text-2xl py-1 font-bold">{foundPost.title}</h1>
+        <p className="py-1">{foundPost.body}</p>
       </div>
     </div>
   );

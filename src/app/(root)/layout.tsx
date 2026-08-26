@@ -31,12 +31,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`h-full antialiased`}>
-        <div className="min-h-full flex flex-col">
-          <header className="w-full mx-auto text-center py-4 text-2xl text-white bg-gray-800">
+        <div className="min-h-full flex flex-col bg-black text-white">
+          <header className="w-full mx-auto text-center py-4 text-2xl border-b">
             <h1>header</h1>
           </header>
           {children}
-          <footer className="w-full border-t py-4 bg-gray-800 text-white text-center text-2xl">
+          <footer className="w-full border-t py-4 text-center text-2xl">
             footer
           </footer>
         </div>
