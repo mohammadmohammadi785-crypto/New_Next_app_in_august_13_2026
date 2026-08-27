@@ -8,9 +8,6 @@ export default function NotFoundforProductDeatils() {
         The product you are loacking for is not found, please make sure you
         inserted the id correctly
       </h1>
-      <button>
-        <Link href="/product">Go Back</Link>
-      </button>
     </div>
   );
 }
