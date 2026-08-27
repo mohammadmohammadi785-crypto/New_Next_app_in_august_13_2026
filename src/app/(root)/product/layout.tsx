@@ -10,7 +10,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={`h-full antialiased`}>
-        <div className="min-h-full flex flex-col">{children}</div>
+        <div className="min-h-screen flex flex-col">{children}</div>
       </body>
     </html>
   );

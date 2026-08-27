@@ -31,8 +31,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`h-full antialiased`}>
-        <div className="min-h-full flex flex-col bg-black text-white">
-          <header className="w-full fixed z-40 backdrop-brightness-0 top-0 left-0 mx-auto text-center py-4 text-2xl border-b">
+        <div className="min-h-full flex relative flex-col bg-black text-white">
+          <header className="w-full mx-auto text-center py-4 text-2xl border-b">
             <h1>header</h1>
           </header>
           {children}

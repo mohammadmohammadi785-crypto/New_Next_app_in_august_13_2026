@@ -2,6 +2,7 @@ import { listProducts } from "@/db/product";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import React from "react";
+import NotFoundforProductDeatils from "./not-found";
 
 export const metadata: Metadata = {
   title: "Product Deatils",
@@ -14,7 +15,7 @@ export default async function page({
 }) {
   const productId = (await params).product_id;
   const foundProduct = listProducts.find((p) => p.id == productId);
-  if (!foundProduct) return notFound();
+  if (!foundProduct) return NotFoundforProductDeatils();
   return (
     <div className="w-full h-svh max-w-6xl mx-auto">
       <div className="gap-2 p-3 grid grid-cols-3 my-60 rounded-md border">
