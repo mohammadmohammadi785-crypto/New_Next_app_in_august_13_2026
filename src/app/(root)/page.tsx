@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 async function Home() {
   await new Promise((res) => setTimeout(res, 1000));
   return (
-    <section id="home">
+    <section id="home" className="w-full h-screen">
       <h2 className="text-3xl">This is the Home Page</h2>
       <Example />
     </section>
