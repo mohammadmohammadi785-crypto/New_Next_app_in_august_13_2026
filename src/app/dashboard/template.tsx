@@ -1,11 +1,11 @@
 import Counter from "@/components/Counter";
 import React from "react";
 
-function DashboardLayout({ childreen }: { childreen: React.ReactNode }) {
+function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
       <Counter />
-      <div>{childreen}</div>
+      <div>{children}</div>
     </div>
   );
 }
