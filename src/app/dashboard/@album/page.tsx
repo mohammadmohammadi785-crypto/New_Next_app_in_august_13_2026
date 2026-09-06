@@ -2,8 +2,8 @@ import React from "react";
 
 export default function page() {
   return (
-    <div>
-      <h1>This is the album page</h1>
+    <div className="p-4 border rounded-md">
+      <h1>All album is: 100</h1>
     </div>
   );
 }
