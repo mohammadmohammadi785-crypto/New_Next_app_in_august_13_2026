@@ -1,3 +1,4 @@
+import { NextRequest } from "next/server";
 import { comments } from "./comments";
 
 type Comment = {
@@ -6,8 +7,11 @@ type Comment = {
   body: string;
 };
 
-export function GET() {
-  return Response.json(comments);
+export function GET(request: NextRequest) {
+  const searchParams = request.nextUrl.searchParams;
+  const text = searchParams.get("title") || "";
+  const filteredComments = comments.filter((x) => x.title.includes(text));
+  return Response.json(filteredComments);
 }
 
 export async function POST(request: Request) {
