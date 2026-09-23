@@ -40,3 +40,22 @@ export async function PUT({
   };
   return Response.json(comments[commentIndex]);
 }
+
+export async function DELETE({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const commentId = Number(id);
+  const findComment = comments.findIndex((comment) => comment.id == commentId);
+  if (!findComment) {
+    return Response.json(
+      {
+        state: false,
+        message: "the comment found with the id " + commentId,
+      },
+      { status: 404 },
+    );
+  }
+  comments.splice(findComment, 1);
+  return Response.json({
+    comments: comments,
+  });
+}
