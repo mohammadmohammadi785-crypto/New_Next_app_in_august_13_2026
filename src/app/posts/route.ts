@@ -9,8 +9,10 @@ type Comment = {
 
 export function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  const text = searchParams.get("title") || "";
-  const filteredComments = comments.filter((x) => x.title.includes(text));
+  const search = searchParams.get("title") || "";
+  const filteredComments = comments.filter((x) =>
+    x.title.toLocaleLowerCase().includes(search),
+  );
   return Response.json(filteredComments);
 }
 
