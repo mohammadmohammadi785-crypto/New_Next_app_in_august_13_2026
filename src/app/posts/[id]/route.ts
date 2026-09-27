@@ -1,6 +1,7 @@
+import { NextRequest } from "next/server";
 import { comments } from "../comments";
 
-export async function GET() {
+export async function GET(request: NextRequest) {
   return Response.json(comments);
 }
 
