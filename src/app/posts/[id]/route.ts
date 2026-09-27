@@ -1,16 +1,7 @@
 import { comments } from "../comments";
 
-export async function GET({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params;
-  const commentId = Number(id);
-  const foundComments = comments.find((x) => x.id === commentId);
-  if (!foundComments) {
-    return Response.json({
-      status: false,
-      message: "the comments was not found",
-    });
-  }
-  return Response.json(foundComments);
+export async function GET() {
+  return Response.json(comments);
 }
 
 export async function PUT({
