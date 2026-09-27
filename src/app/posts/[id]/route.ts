@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 import { comments } from "../comments";
 
 export async function GET(request: NextRequest) {
+  const newRequest = request.nextUrl.pathname;
   return Response.json(comments);
 }
 
