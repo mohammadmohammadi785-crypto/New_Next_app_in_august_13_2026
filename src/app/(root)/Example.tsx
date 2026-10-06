@@ -8,7 +8,7 @@ export default function Example() {
   return (
     <div className="flex flex-col w-fit gap-2.5 mx-4 text-center">
       <Button
-        variant="outline"
+        variant="secondary"
         className="border py-2 px-5 rounded-md"
         onClick={() => setValue(value + 1)}
       >
@@ -16,7 +16,7 @@ export default function Example() {
       </Button>
       <h1 className="border py-2 px-5 rounded-md">{value}</h1>
       <Button
-        variant="outline"
+        variant="secondary"
         className="border py-2 px-5 rounded-md"
         onClick={() => setValue(value - 1)}
       >
