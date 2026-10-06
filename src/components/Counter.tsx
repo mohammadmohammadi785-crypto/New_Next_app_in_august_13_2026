@@ -1,16 +1,14 @@
 "use client";
 import React, { useState } from "react";
+import { Button } from "./ui/button";
 
 export default function Counter() {
   const [value, setValue] = useState(0);
   return (
     <div>
-      <button
-        className="py-2 px-5 my-0.5 border rounded-md"
-        onClick={() => setValue((prev) => prev + 1)}
-      >
+      <Button variant="ghost" onClick={() => setValue((prev) => prev + 1)}>
         +1
-      </button>
+      </Button>
     </div>
   );
 }
