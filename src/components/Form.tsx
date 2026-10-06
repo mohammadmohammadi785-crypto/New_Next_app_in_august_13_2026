@@ -1,5 +1,6 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import React, { useState } from "react";
+import { Button } from "./ui/button";
 
 export default function SearchForm() {
   const searchParams = useSearchParams();
@@ -24,12 +25,13 @@ export default function SearchForm() {
         placeholder="Search"
         onChange={(e) => setValue(e.target.value)}
       />
-      <button
+      <Button
+        variant="outline"
         onClick={handleClick}
         className="py-2 px-5 border hover:cursor-pointer border-l-0 rounded-tl-none rounded-bl-none rounded-md"
       >
         Search
-      </button>
+      </Button>
     </div>
   );
 }
