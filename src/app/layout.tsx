@@ -4,6 +4,8 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { NextIntlClientProvider } from "next-intl";
+import Navbar from "@/components/Navbar";
+import { ThemeProvider } from "next-themes";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -29,7 +31,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className={cn("font-sans", inter.variable)}>
       <body className={`h-full antialiased`}>
         <div className="min-h-full flex flex-col">
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          <NextIntlClientProvider>
+            <ThemeProvider attribute="class" enableSystem defaultTheme="light">
+              <Navbar />
+              {children}
+            </ThemeProvider>
+          </NextIntlClientProvider>
         </div>
       </body>
     </html>
