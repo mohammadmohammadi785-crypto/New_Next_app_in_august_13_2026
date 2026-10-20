@@ -32,10 +32,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className={`h-full antialiased`}>
         <div className="min-h-full flex flex-col">
           <ThemeProvider attribute="class" enableSystem defaultTheme="light">
-            <NextIntlClientProvider>
-              <Navbar />
-              {children}
-            </NextIntlClientProvider>
+            {/* <NextIntlClientProvider> */}
+            <Navbar />
+            {children}
+            {/* </NextIntlClientProvider> */}
           </ThemeProvider>
         </div>
       </body>

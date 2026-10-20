@@ -4,5 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
 };
-const withNextIntl = createNextIntlPlugin();
-export default withNextIntl(nextConfig);
+
+// const withNextIntl = createNextIntlPlugin();
+
+export default nextConfig;
