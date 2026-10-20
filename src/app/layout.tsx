@@ -31,12 +31,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className={cn("font-sans", inter.variable)}>
       <body className={`h-full antialiased`}>
         <div className="min-h-full flex flex-col">
-          <NextIntlClientProvider>
-            <ThemeProvider attribute="class" enableSystem defaultTheme="light">
+          <ThemeProvider attribute="class" enableSystem defaultTheme="light">
+            <NextIntlClientProvider>
               <Navbar />
               {children}
-            </ThemeProvider>
-          </NextIntlClientProvider>
+            </NextIntlClientProvider>
+          </ThemeProvider>
         </div>
       </body>
     </html>

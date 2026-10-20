@@ -1,0 +1,10 @@
+{
+  "navbar": {
+    "logo": "Sharifi High School",
+    "language": "Language",
+    "login": "Login",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  }
+}
